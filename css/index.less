@@ -1,0 +1,319 @@
+body{
+    background: url(../imgs/bg.png) no-repeat top left/cover;
+}
+.game-box{
+    width:100%;
+    position: relative;
+    .box-img{
+        width: 100%;
+        display: block;
+    } 
+    .game{
+        position: absolute;
+        top:0;
+        left:0;
+        width: 100%;
+        height: 100%;
+        // background-color: red;
+        .guize{
+            position: absolute;
+            top:0.3rem;
+            left:0.5rem;
+            img{
+                width: 0.8rem;
+            }
+        }      
+        /*钩子*/
+        .hook-box{
+            position: absolute;
+            overflow: hidden;
+            top:2.08rem;
+            width: 100%;
+            height: 9rem;
+        }
+        #hook{
+            position: absolute;
+            left: 50%;
+            top: -5.4rem;
+            z-index: 1;
+            // margin-left: -65/@rem;
+            transform: translateX(-50%);
+            width: 1.3rem;
+            height:6rem;
+        }
+        
+        #hook .line{
+            margin: auto;
+            width: 0.5rem;
+            height: 6rem;
+            background: url("../imgs/line.png") no-repeat left bottom/100%;
+        }
+        
+        #hook .left,#hook .right{
+            position: absolute;
+            bottom: -0.62rem;
+            width: 0.56rem;
+            height: 1.01rem;
+            z-index: -1;
+        }
+        
+        #hook .left{
+            left: 0;
+            background: url("../imgs/drag_left.png") no-repeat left top/100%;
+            -o-transform-origin: right top;
+            -ms-transform-origin: right top;
+            -moz-transform-origin: right top;
+            -webkit-transform-origin: right top;
+            transform-origin: right top;
+            transform: rotate(-8deg);
+        }
+        
+        #hook .right{
+            right: 0;
+            background: url("../imgs/drag_right.png") no-repeat left top/100%;
+            -o-transform-origin: left top;
+            -ms-transform-origin: left top;
+            -moz-transform-origin: left top;
+            -webkit-transform-origin: left top;
+            transform-origin: left top;
+            -o-transform: rotate(8deg);
+            -ms-transform: rotate(8deg);
+            -moz-transform: rotate(8deg);
+            -webkit-transform: rotate(8deg);
+            transform: rotate(8deg);
+        }
+        #hook img{
+            position: relative;
+            left:50%;
+            transform: translateX(-50%);
+            margin-top:-0.6rem;
+        }
+        #hook .up{
+            -o-animation: up .5s linear forwards;
+            -ms-animation: up .5s linear forwards;
+            -moz-animation: up .5s linear forwards;
+            -webkit-animation: up .5s linear forwards;
+            animation: up .5s linear forwards;
+        }
+        
+        @keyframes up{
+            100%{
+                -o-transform: rotate(25deg);
+                -ms-transform: rotate(25deg);
+                -moz-transform: rotate(25deg);
+                -webkit-transform: rotate(25deg);
+                transform: rotate(25deg);
+            }
+        }
+        #hook .down{
+            -o-animation: down .5s linear forwards;
+            -ms-animation: down .5s linear forwards;
+            -moz-animation: down .5s linear forwards;
+            -webkit-animation: down .5s linear forwards;
+            animation: down .5s linear forwards;
+        }
+        
+        @keyframes down{
+            100%{
+                -o-transform: rotate(-25deg);
+                -ms-transform: rotate(-25deg);
+                -moz-transform: rotate(-25deg);
+                -webkit-transform: rotate(-25deg);
+                transform: rotate(-25deg);
+            }
+        }
+        
+        /*传送带*/
+        .behind,.front{
+            overflow-x: hidden;
+            position: absolute;
+            top: 28%;
+            left:50%;
+            transform: translateX(-50%);
+            width: 72.5%;
+            height: 2.4rem;
+            background: url("../imgs/board-up.png") no-repeat left bottom/100% auto;
+        }
+        
+        .front{
+            top: 46%;
+            width: 72.5%;
+            height: 2.8rem;
+            background-image: url("../imgs/board-down.png");
+        }
+        
+        .behind ul,.front ul{
+            width: 200%;
+        }
+        
+        .front ul{
+            position: absolute;
+            right: 0;
+        }
+        
+        .behind li{
+            position: relative;
+            float: left;
+            height: 1.05rem;
+            img{
+                width: 2rem;
+            }
+        }
+        
+        .front li{
+            position: relative;
+            float: right;
+            height: 1.56;
+            img{
+                width: 2.4rem;
+            }
+        }
+        
+        h3{
+            position: absolute;
+            width: 40%;
+            height: 0.9rem;
+            bottom:2.2rem;
+            left:50%;
+            transform: translateX(-50%);
+            text-align: center;
+            line-height: 0.85rem;
+            color:#fff;
+            font-size: 14px;
+            background: url(../imgs/screen.png) no-repeat top left/100%;
+        }
+        
+
+        // 操作按钮开始
+        .option-box{
+            position: absolute;
+            bottom: 0.1rem;
+            width: 100%;          
+            .left{
+                position: absolute;
+                left:0.3rem;
+                bottom:0;
+                transform-origin: center bottom;
+                -o-animation: shak 3s ease-in-out infinite alternate;
+                -ms-animation: shak 3s ease-in-out infinite alternate;
+                -moz-animation: shak 3s ease-in-out infinite alternate;
+                -webkit-animation: shak 3s ease-in-out infinite alternate;
+                animation: shak 3s ease-in-out infinite alternate;
+                img{
+                  width: 1.4rem;  
+                }
+            }
+            @keyframes shak {
+                0%,
+                100% {
+                  -o-transform: rotate(0deg);
+                  -ms-transform: rotate(0deg);
+                  -moz-transform: rotate(0deg);
+                  -webkit-transform: rotate(0deg);
+                  transform: rotate(0deg);
+                }
+                20%,
+                60% {
+                  -o-transform: rotate(-5deg);
+                  -ms-transform: rotate(-5deg);
+                  -moz-transform: rotate(-5deg);
+                  -webkit-transform: rotate(-5deg);
+                  transform: rotate(-5deg);
+                }
+                40%,
+                80% {
+                  -o-transform: rotate(5deg);
+                  -ms-transform: rotate(5deg);
+                  -moz-transform: rotate(5deg);
+                  -webkit-transform: rotate(5deg);
+                  transform: rotate(5deg);
+                }
+              }
+            .center{
+                position: absolute;
+                left:50%;
+                margin-left:-.9rem;
+                bottom:0;
+                transform-origin: 50% bottom;
+                img{
+                    width: 1.8rem;  
+                }
+            }
+            .toBigSmall{
+                animation: toBigSmall 0.5s ease-in-out;
+            }
+            @keyframes toBigSmall {
+                0%{
+                    transform: scale(1.0);
+                }
+                50%{
+                    transform: scale(0.8); 
+                }
+                100%{
+                    transform: scale(1.0);  
+                }
+            }
+            .right{
+                position: absolute;
+                right:0;
+                bottom:0;
+                img{
+                    width: 2.3rem;  
+                }
+            }
+            
+        }
+    }
+}
+// 选择弹窗
+.modal-box{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.85);
+    z-index: 5;
+    display: none;
+    .modal{
+        position: absolute;
+        width: 80%;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        img{width: 100%;}
+        .modal-con{
+             position: absolute;
+             top: 0;
+             left: 0;
+             width: 100%;
+             height: 100%;
+             padding:0 0.7rem;
+             box-sizing: border-box;
+             font-size: 0.32rem;
+             color:#fff;
+             p{
+                 margin-top:1rem;
+             }
+             .modal-opa{
+                 display: flex;
+                 justify-content: space-between;
+                 margin-top:0.8rem;
+                .modal-confirm,.modal-cancel{
+                    width:38%;
+                    align-self: flex-start;
+                }
+             }
+             
+        }
+    }
+}
+.modal-box .close-modal{
+    position: absolute;
+    top:0;
+    right:0;
+    width: 0.7rem;
+    height: 0.7rem;
+    z-index: 22;
+    // background: red;
+}

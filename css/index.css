@@ -1,0 +1,303 @@
+body {
+  background: url(../imgs/bg.png) no-repeat top left / cover;
+}
+.game-box {
+  width: 100%;
+  position: relative;
+}
+.game-box .box-img {
+  width: 100%;
+  display: block;
+}
+.game-box .game {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /*钩子*/
+  /*传送带*/
+}
+.game-box .game .guize {
+  position: absolute;
+  top: 0.3rem;
+  left: 0.5rem;
+}
+.game-box .game .guize img {
+  width: 0.8rem;
+}
+.game-box .game .hook-box {
+  position: absolute;
+  overflow: hidden;
+  top: 2.08rem;
+  width: 100%;
+  height: 9rem;
+}
+.game-box .game #hook {
+  position: absolute;
+  left: 50%;
+  top: -5.4rem;
+  z-index: 1;
+  transform: translateX(-50%);
+  width: 1.3rem;
+  height: 6rem;
+}
+.game-box .game #hook .line {
+  margin: auto;
+  width: 0.5rem;
+  height: 6rem;
+  background: url("../imgs/line.png") no-repeat left bottom / 100%;
+}
+.game-box .game #hook .left,
+.game-box .game #hook .right {
+  position: absolute;
+  bottom: -0.62rem;
+  width: 0.56rem;
+  height: 1.01rem;
+  z-index: -1;
+}
+.game-box .game #hook .left {
+  left: 0;
+  background: url("../imgs/drag_left.png") no-repeat left top / 100%;
+  -o-transform-origin: right top;
+  -ms-transform-origin: right top;
+  -moz-transform-origin: right top;
+  -webkit-transform-origin: right top;
+  transform-origin: right top;
+  transform: rotate(-8deg);
+}
+.game-box .game #hook .right {
+  right: 0;
+  background: url("../imgs/drag_right.png") no-repeat left top / 100%;
+  -o-transform-origin: left top;
+  -ms-transform-origin: left top;
+  -moz-transform-origin: left top;
+  -webkit-transform-origin: left top;
+  transform-origin: left top;
+  -o-transform: rotate(8deg);
+  -ms-transform: rotate(8deg);
+  -moz-transform: rotate(8deg);
+  -webkit-transform: rotate(8deg);
+  transform: rotate(8deg);
+}
+.game-box .game #hook img {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: -0.6rem;
+}
+.game-box .game #hook .up {
+  -o-animation: up .5s linear forwards;
+  -ms-animation: up .5s linear forwards;
+  -moz-animation: up .5s linear forwards;
+  -webkit-animation: up .5s linear forwards;
+  animation: up .5s linear forwards;
+}
+@keyframes up {
+  100% {
+    -o-transform: rotate(25deg);
+    -ms-transform: rotate(25deg);
+    -moz-transform: rotate(25deg);
+    -webkit-transform: rotate(25deg);
+    transform: rotate(25deg);
+  }
+}
+.game-box .game #hook .down {
+  -o-animation: down .5s linear forwards;
+  -ms-animation: down .5s linear forwards;
+  -moz-animation: down .5s linear forwards;
+  -webkit-animation: down .5s linear forwards;
+  animation: down .5s linear forwards;
+}
+@keyframes down {
+  100% {
+    -o-transform: rotate(-25deg);
+    -ms-transform: rotate(-25deg);
+    -moz-transform: rotate(-25deg);
+    -webkit-transform: rotate(-25deg);
+    transform: rotate(-25deg);
+  }
+}
+.game-box .game .behind,
+.game-box .game .front {
+  overflow-x: hidden;
+  position: absolute;
+  top: 28%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 72.5%;
+  height: 2.4rem;
+  background: url("../imgs/board-up.png") no-repeat left bottom / 100% auto;
+}
+.game-box .game .front {
+  top: 46%;
+  width: 72.5%;
+  height: 2.8rem;
+  background-image: url("../imgs/board-down.png");
+}
+.game-box .game .behind ul,
+.game-box .game .front ul {
+  width: 200%;
+}
+.game-box .game .front ul {
+  position: absolute;
+  right: 0;
+}
+.game-box .game .behind li {
+  position: relative;
+  float: left;
+  height: 1.05rem;
+}
+.game-box .game .behind li img {
+  width: 2rem;
+}
+.game-box .game .front li {
+  position: relative;
+  float: right;
+  height: 1.56;
+}
+.game-box .game .front li img {
+  width: 2.4rem;
+}
+.game-box .game h3 {
+  position: absolute;
+  width: 40%;
+  height: 0.9rem;
+  bottom: 2.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  line-height: 0.85rem;
+  color: #fff;
+  font-size: 14px;
+  background: url(../imgs/screen.png) no-repeat top left / 100%;
+}
+.game-box .game .option-box {
+  position: absolute;
+  bottom: 0.1rem;
+  width: 100%;
+}
+.game-box .game .option-box .left {
+  position: absolute;
+  left: 0.3rem;
+  bottom: 0;
+  transform-origin: center bottom;
+  -o-animation: shak 3s ease-in-out infinite alternate;
+  -ms-animation: shak 3s ease-in-out infinite alternate;
+  -moz-animation: shak 3s ease-in-out infinite alternate;
+  -webkit-animation: shak 3s ease-in-out infinite alternate;
+  animation: shak 3s ease-in-out infinite alternate;
+}
+.game-box .game .option-box .left img {
+  width: 1.4rem;
+}
+@keyframes shak {
+  0%,
+  100% {
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  20%,
+  60% {
+    -o-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    -moz-transform: rotate(-5deg);
+    -webkit-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+  }
+  40%,
+  80% {
+    -o-transform: rotate(5deg);
+    -ms-transform: rotate(5deg);
+    -moz-transform: rotate(5deg);
+    -webkit-transform: rotate(5deg);
+    transform: rotate(5deg);
+  }
+}
+.game-box .game .option-box .center {
+  position: absolute;
+  left: 50%;
+  margin-left: -0.9rem;
+  bottom: 0;
+  transform-origin: 50% bottom;
+}
+.game-box .game .option-box .center img {
+  width: 1.8rem;
+}
+.game-box .game .option-box .toBigSmall {
+  animation: toBigSmall 0.5s ease-in-out;
+}
+@keyframes toBigSmall {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.game-box .game .option-box .right {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.game-box .game .option-box .right img {
+  width: 2.3rem;
+}
+.modal-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 5;
+  display: none;
+}
+.modal-box .modal {
+  position: absolute;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.modal-box .modal img {
+  width: 100%;
+}
+.modal-box .modal .modal-con {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0 0.7rem;
+  box-sizing: border-box;
+  font-size: 0.32rem;
+  color: #fff;
+}
+.modal-box .modal .modal-con p {
+  margin-top: 1rem;
+}
+.modal-box .modal .modal-con .modal-opa {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.8rem;
+}
+.modal-box .modal .modal-con .modal-opa .modal-confirm,
+.modal-box .modal .modal-con .modal-opa .modal-cancel {
+  width: 38%;
+  align-self: flex-start;
+}
+.modal-box .close-modal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0.7rem;
+  height: 0.7rem;
+  z-index: 22;
+}

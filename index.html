@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/common_mobile.css">
+    <script src="js/rem.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <title>抽奖</title>
+</head>
+<body>
+    <div class="game-box">
+        <img src="imgs/box.png" alt="" class="box-img">
+        <div class="game">
+            <div class="guize rule">
+                <img src="imgs/explain.png" alt="">
+            </div>
+            <!--钩子-->
+            <div class="hook-box">
+                <ul id="hook">
+                    <li class="line"></li>
+                    <li class="left"></li>
+                    <li class="right"></li>
+                </ul>
+            </div>
+            <!--传送带-->
+            <div class="behind">
+                <ul class="clearfix">
+                    <li class="moveing-left">
+                        <img src="imgs/small.png">
+                    </li>
+                    <li>
+                        <img src="imgs/small.png">
+                    </li>
+                    <li>
+                        <img src="imgs/small.png">
+                    </li>
+                </ul>
+            </div>
+            <div class="front">
+                <ul class="clearfix">
+                    <li class="moveing-right">
+                        <img src="imgs/big.png">
+                    </li>
+                    <li>
+                        <img src="imgs/big.png">
+                    </li>
+                    <li>
+                        <img src="imgs/big.png">
+                    </li>
+                </ul>
+            </div>
+            <h3>免费抓取</h3>
+            <div class="option-box">
+                <div class="left">
+                    <img src="imgs/left.png" alt="">
+                </div>
+                <div class="center" id="btn">
+                    <img src="imgs/start.png" alt="">
+                </div>
+                <div class="right">
+                    <img src="imgs/right.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--中奖提示-->
+    <div id="mask">
+        <!-- <div class="blin"></div> -->
+        <div class="caidai"></div>
+        <div class="winning">
+            <!-- <div class="red-head"></div>
+            <div class="red-body"></div>
+            <div id="card">
+                <a href="" target="_self" class="win"></a>
+            </div> -->
+            <div class="winning-text">恭喜你获得了10积分</div>
+            <img src="imgs/zhongjiang.png" alt="">
+            <div  class="btn">立即领取</div>
+            <span id="close"></span>
+        </div>
+    </div>
+
+    <!--游戏规则弹窗-->
+    <div id="mask-rule">
+        <div class="box-rule">
+            <img src="imgs/rule.png" alt="">
+            <div id="close-rule"></div>
+            <div class="rule-con">
+                <div class="title">
+                    <div class="dian"></div>
+                    <div class="title-text">游戏说明</div>
+                    <div class="dian"></div>
+                </div>
+                <div class="rule-item">
+                    <div class="item-title">一.游戏资格</div>
+                    <div class="item-con">凡完成【北汽昌河服务号】车主绑定的 用户，均可参与此“每日抓积分”游戏。</div>
+                </div>
+                <div class="rule-item">
+                    <div class="item-title">二.积分奖励</div>
+                    <div class="item-con">每日参与游戏即有机会抓得0-20不等积分奖励。</div>
+                </div>
+                <div class="rule-item">
+                    <div class="item-title">三.游戏规则</div>
+                    <div class="item-con">1.每日赠送1次抓取免费机会；</div>
+                    <div class="item-con">2.当日免费机会用尽后，可花费5积分购 买额外抓取机会；</div>
+                    <div class="item-con">3.每日最多额外购买2次抓取机会；</div>
+                    <div class="item-con">4.所抓取积分可从“会员中心-我的积分” 内查看。</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 选择弹窗 -->
+    <div class="modal-box">
+        <div class="modal">
+            <img src="imgs/modal.png" alt="">
+            <div class="modal-con">
+                <div class="close-modal"></div>
+                <p>本次抓取需要消耗5积分，请确认是否继续？</p>
+                <div class="modal-opa">
+                    <img src="imgs/modal_cancel.png" alt="" class="modal-cancel">
+                    <img src="imgs/modal_confirm.png" alt="" class="modal-confirm">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="js/jquery-1.11.2.min.js"></script>
+<!-- <script src="js/swiper.jquery.min.js"></script> -->
+<script src="js/h5_game_common.js"></script>
+<script src="js/index.js"></script>
